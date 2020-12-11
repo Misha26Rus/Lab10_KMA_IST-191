@@ -22,6 +22,7 @@ For Each objProc In objService.ExecQuery("SELECT * FROM Win32_Processor")
 	info = info & "External clock frequency in MHz - " & objProc.ExtClock & chr(10)
 	info = info & "Max Clock Speed in MHz - " & objProc.MaxClockSpeed & chr(10)
 	info = info & "L2CacheSize - " & objProc.L2CacheSize & chr(10)
+	info = info & "SystemName " & objProc.SystemName & chr(10)
 Next
 objFile.WriteLine info
 WScript.echo info
