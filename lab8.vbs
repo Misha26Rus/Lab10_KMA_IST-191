@@ -9,6 +9,7 @@ If Err.Number <> 0 Then
 End If
 For Each objObject In objService.ExecQuery("SELECT * FROM Win32_CacheMemory")
 	info = info & "Processor description " & objProc.Description & chr(10)
+	info = info & "Processor name " & Trim(objProc.Name) & chr(10)
     info = info & "Current size of the installed cache memory - "  & objObject.InstalledSize & chr(10)
 	info = info & "Type of cache - "  & objObject.CacheType & chr(10) ' Other (1), Unknown (2), Instruction (3)
 ' Data (4), Unified (5)
