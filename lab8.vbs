@@ -8,6 +8,7 @@ If Err.Number <> 0 Then
 	WScript.Quit
 End If
 For Each objObject In objService.ExecQuery("SELECT * FROM Win32_CacheMemory")
+	info = info & "Processor version " & objProc.Version & chr(10)
 	info = info & "Processor description " & objProc.Description & chr(10)
 	info = info & "Processor name " & Trim(objProc.Name) & chr(10)
     info = info & "Current size of the installed cache memory - "  & objObject.InstalledSize & chr(10)
