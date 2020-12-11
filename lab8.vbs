@@ -1,7 +1,7 @@
 ' Сценарий WMI, 2 вариант. Работа выполнена Куценко М.А. ИСТ-191
 On Error Resume Next
 Set objFSO = CreateObject("Scripting.FileSystemObject")
-Set objFile = objFSO.CreateTextFile("D:\WMI.txt")
+Set objFile = objFSO.CreateTextFile("D:\WMI_info.txt")
 Set objService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\CIMV2")
 If Err.Number <> 0 Then
 	WScript.Echo Err.Number & ": " & Err.Description
